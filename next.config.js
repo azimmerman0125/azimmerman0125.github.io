@@ -3,7 +3,7 @@
  */
 
 const nextConfig = {
- images: {
+  images: {
     unoptimized: true,
   },
   reactStrictMode: true,
