@@ -1,39 +1,38 @@
-import Pagination from "@components/Pagination";
 import config from "@config/config.json";
-import Post from "@layouts/components/Post";
-import { getSinglePage } from "@lib/contentParser";
+import Base from "@layouts/Baseof";
+import Pagination from "@layouts/components/Pagination";
+import { getListPage, getSinglePage } from "@lib/contentParser";
+import { markdownify } from "@lib/utils/textConverter";
 import { sortByDate } from "@lib/utils/sortFunctions";
-const { blog_folder } = config.settings;
+import Post from "@partials/Post";
+const { blog_folder, summary_length } = config.settings;
 
 // blog pagination
-const BlogPagination = ({ posts, currentPage, pagination }) => {
+const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
+  const orderedPosts = sortByDate(posts);
+  const currentPosts = orderedPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const { frontmatter } = postIndex;
+  const { title } = frontmatter;
   const totalPages = Math.ceil(posts.length / pagination);
 
-  const currentPosts = sortByDate(
-    posts.slice(indexOfFirstPost, indexOfLastPost)
-  );
-
   return (
-    <div className="section container">
-      <div className="row">
-        <div className="mx-auto lg:col-10">
-          <div className="row">
+    <Base title={title}>
+      <section className="section">
+        <div className="container">
+          {markdownify(title, "h1", "h2 mb-8 text-center")}
+          <div className="row mb-16">
             {currentPosts.map((post, i) => (
-              <Post
-                className="col-12 mb-6 sm:col-6"
-                key={"key-" + i}
-                post={post}
-              />
+              <div className="mt-16 lg:col-6" key={post.slug}>
+                <Post post={post} />
+              </div>
             ))}
           </div>
+          <Pagination totalPages={totalPages} currentPage={currentPage} />
         </div>
-      </div>
-      <div className="mt-12">
-        <Pagination totalPages={totalPages} currentPage={currentPage} />
-      </div>
-    </div>
+      </section>
+    </Base>
   );
 };
 
@@ -66,12 +65,14 @@ export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
   const posts = getSinglePage(`content/${blog_folder}`);
+  const postIndex = await getListPage(`content/${blog_folder}/_index.md`);
 
   return {
     props: {
       pagination: pagination,
       posts: posts,
       currentPage: currentPage,
+      postIndex: postIndex,
     },
   };
 };

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
+import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
 
-const Pagination = ({ currentPage, totalPages }) => {
+const Pagination = ({ section, currentPage, totalPages }) => {
   const indexPageLink = currentPage === 2;
   const hasPrevPage = currentPage > 1;
   const hasNextPage = totalPages > currentPage;
@@ -15,49 +16,29 @@ const Pagination = ({ currentPage, totalPages }) => {
     <>
       {totalPages > 1 && (
         <nav
-          className="mb-4 flex justify-center -space-x-px"
+          className="item-center mb-4 flex justify-center space-x-1 lg:space-x-2"
           aria-label="Pagination"
         >
           {/* previous */}
           {hasPrevPage ? (
             <Link
-              href={indexPageLink ? "/" : `/page/${currentPage - 1}`}
-              className="border border-primary px-2 py-2 text-text"
+              href={
+                indexPageLink
+                  ? `${section ? "/" + section : "/"}`
+                  : `${section ? "/" + section : ""}/page/${currentPage - 1}`
+              }
+              className="flex items-center rounded-full px-2 py-1 text-3xl font-bold leading-none text-dark dark:text-darkmode-light"
             >
               <>
-                <span className="sr-only">Previous</span>
-                <svg
-                  className="mt-1 h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <BsArrowLeftShort />
+                <span className="ml-3 text-lg ">Previous</span>
               </>
             </Link>
           ) : (
-            <span className="border border-primary px-2 py-2 text-text">
+            <span className="flex items-center rounded-full px-2 py-1 text-3xl font-bold text-dark dark:text-darkmode-light ">
               <>
-                <span className="sr-only">Previous</span>
-                <svg
-                  className="mt-1 h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <BsArrowLeftShort />
+                <span className="ml-3 text-lg">Previous</span>
               </>
             </span>
           )}
@@ -68,16 +49,20 @@ const Pagination = ({ currentPage, totalPages }) => {
               {pagination === currentPage ? (
                 <span
                   aria-current="page"
-                  className={`border border-primary bg-primary px-4 py-2 text-white`}
+                  className={`inline-flex h-[38px] w-[38px] items-center justify-center rounded-full bg-primary px-4 py-1 font-secondary text-lg font-bold leading-none text-dark text-white dark:text-darkmode-light`}
                 >
                   {pagination}
                 </span>
               ) : (
                 <Link
-                  href={i === 0 ? `${"/"}` : `/page/${pagination}`}
+                  href={
+                    i === 0
+                      ? `${section ? "/" + section : "/"}`
+                      : `${section ? "/" + section : ""}/page/${pagination}`
+                  }
                   passHref
                   aria-current="page"
-                  className={`border border-primary px-4 py-2 text-text`}
+                  className={`inline-flex h-[38px] w-[38px] items-center justify-center rounded-full px-4 py-1 font-secondary text-lg font-bold leading-none text-dark dark:text-darkmode-light`}
                 >
                   {pagination}
                 </Link>
@@ -88,43 +73,19 @@ const Pagination = ({ currentPage, totalPages }) => {
           {/* next page */}
           {hasNextPage ? (
             <Link
-              href={`/page/${currentPage + 1}`}
-              className="border border-primary px-2 py-2 text-text"
+              href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
+              className="ml-4 flex items-center rounded-full px-2 py-1 text-3xl font-bold leading-none text-dark dark:text-darkmode-light"
             >
               <>
-                <span className="sr-only">Next</span>
-                <svg
-                  className="mt-1 h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <span className="mr-3 text-lg">Next</span>
+                <BsArrowRightShort />
               </>
             </Link>
           ) : (
-            <span className="border border-primary px-2 py-2 text-text">
+            <span className="ml-4 flex items-center rounded-full px-2 py-1 text-3xl font-bold text-dark dark:text-darkmode-light">
               <>
-                <span className="sr-only">Next</span>
-                <svg
-                  className="mt-1 h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <span className="mr-3 text-lg">Next</span>
+                <BsArrowRightShort />
               </>
             </span>
           )}

@@ -1,4 +1,5 @@
 import NotFound from "@layouts/404";
+import About from "@layouts/About";
 import Base from "@layouts/Baseof";
 import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
@@ -21,6 +22,8 @@ const RegularPages = ({ data }) => {
     >
       {layout === "404" ? (
         <NotFound data={data} />
+      ) : layout === "about" ? (
+        <About data={data} />
       ) : layout === "contact" ? (
         <Contact data={data} />
       ) : (
@@ -50,7 +53,6 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { regular } = params;
   const allPages = await getRegularPage(regular);
-
   return {
     props: {
       slug: regular,
