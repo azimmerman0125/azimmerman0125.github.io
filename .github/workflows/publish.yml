@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-        uses: ./.github/workflows/setup-node
+        uses: /.github/workflows/setup-node
 
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v4
@@ -34,12 +34,12 @@ jobs:
         run: npm run build
 
       - name: list files
-        run: ls -l ./out/*
+        run: ls -l /out/*
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: /out
 
   deploy:
     environment:
