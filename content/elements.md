@@ -17,7 +17,7 @@ draft: false
 
 ---
 
-#### Paragraph
+### Paragraph
 
 Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and ships.
 
@@ -25,7 +25,7 @@ Did you come here for something in particular or just general Riker-bashing? And
 
 ---
 
-#### Emphasis
+### Emphasis
 
 1. Did you come here for something in **particular** or just general
 
@@ -45,7 +45,7 @@ Did you come here for something in particular or just general Riker-bashing? And
 
 ---
 
-#### Link
+### Link
 
 [I'm an inline-style link](https://www.google.com)
 
@@ -69,7 +69,7 @@ Some text to show that the reference links can follow later.
 
 ---
 
-#### Ordered List
+### Ordered List
 
 1. List item
 2. List item
@@ -79,7 +79,7 @@ Some text to show that the reference links can follow later.
 
 ---
 
-#### Unordered List
+### Unordered List
 
 - List item
 - List item
@@ -89,71 +89,59 @@ Some text to show that the reference links can follow later.
 
 ---
 
-#### Code and Syntax Highlighting
+### Code and Syntax Highlighting
 
-##### HTML
+#### HTML
 
 <Code language="html">
-{`
-<ul>
+{`<ul>
   <li class="nav-item">
     <a class="nav-link" href="/">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="about/">About</a>
   </li>
-</ul>
-`}
+</ul>`}
 </Code>
 
 ---
 
-##### CSS
+#### CSS
 
 <Code language="css">
-{`
-img {
+{`img {
   vertical-align: middle;
   border: 0;
   max-width: 100%;
   height: auto;
-}
-`}
+}`}
 </Code>
 
 ---
 
-##### JavaScript
+#### JavaScript
 
 <Code language="javascript">
-{`
-window.addEventListener("load", (e) => {
+{`window.addEventListener("load", (e) => {
   document.querySelector(".preloader").style.display = "none";
-})
-`}
+})`}
 </Code>
 
 ---
 
-#### Github Gist
+### Button
 
-<Gist src="https://gist.github.com/tfsohag/4aa43a6d9d3518ed627727d2ad5b2f44.js"/>
-
----
-
-#### Button
-
-<Button href="#" type="btn-primary">Button</Button>
+<Button href="#" type="solid">Button</Button>
 
 ---
 
-#### Quote
+### Quote
 
 > Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once.
 
 ---
 
-#### Notice
+### Notice
 
 <Notice type="note">
   This is a simple note.
@@ -167,7 +155,7 @@ window.addEventListener("load", (e) => {
   This is a simple note.
 </Notice>
 
-<Notice type="warning" title="Warning">
+<Notice type="warning">
   This is a simple note.
 </Notice>
 
@@ -177,44 +165,44 @@ window.addEventListener("load", (e) => {
 
 <Tab name="Tab 1">
 
-##### Did you come here for something in particular?
+#### Did you come here for something in particular?
 
-  Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf.
+Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf.
 </Tab>
 
 <Tab name="Tab 2">
 
-##### I wanna talk about the assassination attempt
+#### I wanna talk about the assassination attempt
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 </Tab>
 
 <Tab name="Tab 3">
 
-##### We know you’re dealing in stolen ore
+#### We know you’re dealing in stolen ore
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
 </Tab>
 
 </Tabs>
 
 ---
 
-#### Table
+### Table
 
-| #    | First      | Last        | Handle        |
-| :---| :---:        |    :----:   |          ---: |
-|1    | Row:1 Cell:1| Row:1 Cell:2| Row:1 Cell:3  |
-|2    | Row:2 Cell:1| Row:2 Cell:2| Row:2 Cell:3  |
-|3    | Row:3 Cell:1| Row:3 Cell:2| Row:3 Cell:3  |
+| #   |    First     |     Last     |       Handle |
+| :-- | :----------: | :----------: | -----------: |
+| 1   | Row:1 Cell:1 | Row:1 Cell:2 | Row:1 Cell:3 |
+| 2   | Row:2 Cell:1 | Row:2 Cell:2 | Row:2 Cell:3 |
+| 3   | Row:3 Cell:1 | Row:3 Cell:2 | Row:3 Cell:3 |
 
 ---
 
-#### Collapse
+### Collapse
 
 <Accordion title="Why should you need to do this?">
 
@@ -226,7 +214,7 @@ window.addEventListener("load", (e) => {
 
 </Accordion>
 
-<Accordion className="mt-3" title="How can I adjust Horizontal centering">
+<Accordion title="How can I adjust Horizontal centering">
 
 - This is a thing.
 - This is a thing.
@@ -236,7 +224,7 @@ window.addEventListener("load", (e) => {
 
 </Accordion>
 
-<Accordion className="mt-3" title="Should you use Negative margin?">
+<Accordion title="Should you use Negative margin?">
 
 - This is a thing.
 - This is a thing.
@@ -248,18 +236,18 @@ window.addEventListener("load", (e) => {
 
 ---
 
-#### Image
+### Image
 
-![coding](/images/posts/post-2.jpg)
-
----
-
-#### Youtube video
-
-<Youtube id="qJA2U-YMvkk" title="Play: Video" />
+![image](/images/post/post-1.png)
 
 ---
 
-#### Custom video
+### Youtube video
 
-<Video width="100%" src="http://techslides.com/demos/sample-videos/small.mp4" />
+<Youtube id="ZEe-IFezQok" title="Play:Youtube"/>
+
+---
+
+### Custom video
+
+<Video width="100%" src="https://joy1.videvo.net/videvo_files/video/free/video0467/large_watermarked/_import_61516692993d77.04238324_preview.mp4" />

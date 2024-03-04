@@ -1,6 +1,6 @@
-<h1 align=center>Hydrogen Nextjs</h1>
-<p align=center>Hydrogen is a minimal & highly customizable free NextJs personal blog template ideal for creating personal blog website.</p>
-<h2 align="center"> <a target="_blank" href="https://hydrogen-nextjs.vercel.app/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fhydrogen-nextjs.vercel.app%2F&form_factor=desktop">Page Speed (100%)</a>
+<h1 align=center>Geeky Nextjs</h1>
+<p align=center>Geeky is a free NextJs personal blog template</p>
+<h2 align="center"> <a target="_blank" href="https://geeky-nextjs.vercel.app/" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fgeeky-nextjs.vercel.app%2F&form_factor=desktop">Page Speed (100%)</a>
 </h2>
 
 <p align=center>
@@ -8,28 +8,28 @@
     <img src="https://img.shields.io/static/v1?label=NEXTJS&message=13.0&color=000&logo=nextjs" />
   </a>
 
-  <a href="https://github.com/statichunt/hydrogen-nextjs/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/statichunt/hydrogen-nextjs" alt="license"></a>
+  <a href="https://github.com/statichunt/geeky-nextjs/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/statichunt/geeky-nextjs" alt="license"></a>
 
-  <img src="https://img.shields.io/github/languages/code-size/statichunt/hydrogen-nextjs" alt="code size">
+  <img src="https://img.shields.io/github/languages/code-size/statichunt/geeky-nextjs" alt="code size">
 
-  <a href="https://github.com/statichunt/hydrogen-nextjs/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/statichunt/hydrogen-nextjs" alt="contributors"></a>
+  <a href="https://github.com/statichunt/geeky-nextjs/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/statichunt/geeky-nextjs" alt="contributors"></a>
 </p>
 
-![hydrogen](https://statichunt.com/themes/nextjs-hydrogen.png)
+![geeky](https://statichunt.com/themes/nextjs-geeky.png)
 
 ## Key Features
 
 - Google Page Speed score 100! (Desktop)
 - Supports Contact Form
-- Disqus Comment Support 
-- Related Posts Suggestion 
+- Disqus Comment Support
+- Related Posts Suggestion
 - MDX Support with many built-in custom components
 - Semantic HTML Document Structure
 - Custom Logo Support
 - Includes All SCSS Files
-- Taxonomy Page Support 
+- Taxonomy Page Support
 - Images Optimized With Next/image
 
 <!-- installation -->
@@ -70,14 +70,14 @@ npm run build
 <!-- reporting issue -->
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for this Template. Please Search [existing issues](https://github.com/statichunt/hydrogen-nextjs/issues). It’s possible someone has already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/statichunt/hydrogen-nextjs/issues).
+We use GitHub Issues as the official bug tracker for this Template. Please Search [existing issues](https://github.com/statichunt/geeky-nextjs/issues). It’s possible someone has already reported the same problem.
+If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/statichunt/geeky-nextjs/issues).
 
 <!-- licence -->
 ## License
 
 Copyright (c) 2019 - Present, Designed & Developed by [statichunt](https://statichunt.com)
 
-**Code License:** Released under the [MIT](https://github.com/statichunt/hydrogen-nextjs/blob/main/LICENSE) license.
+**Code License:** Released under the [MIT](https://github.com/statichunt/geeky-nextjs/blob/main/LICENSE) license.
 
 **Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.

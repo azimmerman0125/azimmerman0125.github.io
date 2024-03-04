@@ -35,7 +35,7 @@ jobs:
           pwd
           node --version
           npm --version
-          npm run build
+          npm run export
           ls out/*
 
       - name: list files

@@ -1,23 +1,31 @@
 .btn {
-  @apply inline-block border px-4 py-[11px] font-normal transition;
+  @apply font-secondary inline-block border px-5 py-2.5 font-bold transition;
 }
 
 .btn-primary {
-  @apply rounded border-none bg-white text-black no-underline hover:bg-primary;
+  @apply bg-primary text-white rounded-[50px] px-8 py-2.5  relative border-0 overflow-hidden h-12;
+
+  &::before {
+    @apply content-[''] absolute  h-full right-0  bg-black/5 w-0 top-0 transition-all duration-500 rounded-[50px] ease-[cubic-bezier(.42,0,.58,1)];
+  }
+
+  &:hover {
+     &::before {
+      @apply w-full right-auto left-0;
+    }
+  }
 }
 
 .btn-outline-primary {
-  @apply border-primary bg-transparent hover:bg-primary hover:text-dark;
-}
+  @apply border-primary bg-transparent hover:bg-primary hover:text-white  rounded-[50px] text-primary font-bold relative transition-all ease-[cubic-bezier(.42,0,.58,1)] duration-75 overflow-hidden h-12;
 
-.btn-link {
-  @apply relative overflow-hidden duration-200 hover:ml-1;
-
-  &::after {
-    @apply absolute right-0 bottom-0 h-[1px] w-0 bg-primary transition-all duration-200 content-[""];
+  &::before {
+    @apply content-[''] absolute  h-full right-0  bg-black/5 w-0 top-0 transition-all duration-500 rounded-[50px];
   }
 
-  &:hover::after {
-    @apply right-auto left-0 w-full;
+  &:hover {
+     &::before {
+      @apply w-full right-auto left-0;
+    }
   }
 }
