@@ -1,13 +1,13 @@
 ---
 banner:
   title: Welcome **!**
-  title_small: "to John Bravo's Blog"
-  content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
+  title_small: "to Adam Zimmerman's Blog"
+  content: I love impacting the world through engineering and servant leadership, one interaction at a time.
   image_enable: true
   image: /images/banner-author.png
   button:
     enable: true
-    label: Know About Me
+    label: More About Me
     link: /about
     rel: ""
 
@@ -16,7 +16,7 @@ featured_posts:
   title: Featured Posts
 
 promotion:
-  enable: true
+  enable: false
   image: /images/promotion.png
   link: "#"
 
