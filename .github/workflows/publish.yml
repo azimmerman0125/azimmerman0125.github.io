@@ -32,10 +32,9 @@ jobs:
 
       - name: Build with Next.js 🏗️
         run: | 
+          pwd
           node --version
           npm --version
-          next --version
-          pwd
           npm run build
           ls out/*
 
