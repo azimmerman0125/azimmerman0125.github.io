@@ -9,6 +9,10 @@
       "url": "/about"
     },
     {
+      "name": "Resources",
+      "url": "/resources"
+    },
+    {
       "name": "Elements",
       "url": "/elements"
     },
@@ -34,8 +38,8 @@
       "url": "/about"
     },
     {
-      "name": "Privacy Policy",
-      "url": "#"
+      "name": "Resources",
+      "url": "/resources"
     }
   ]
 }
