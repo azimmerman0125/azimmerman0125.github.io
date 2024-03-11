@@ -164,6 +164,17 @@ footer .socials {
   }
 }
 
+//volunteer
+.volunteer {
+  ul li {
+    @apply relative pl-7;
+
+    &::before {
+      @apply absolute left-1 top-2.5 h-[9px] w-[9px] rounded-full border-2 border-body bg-primary shadow-[0px_0px_0px_2px] shadow-primary content-[''] dark:border-darkmode-body;
+    }
+  }
+}
+
 // notice
 .notice {
   @apply rounded overflow-x-hidden;
