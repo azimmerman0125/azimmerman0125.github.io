@@ -10,6 +10,7 @@ const About = ({ data }) => {
 
   return (
     <section className="section mt-16">
+      {/* Main Content */}
       <div className="container text-center">
         {image && (
           <div className="mb-8">
@@ -34,8 +35,8 @@ const About = ({ data }) => {
           <MDXRemote {...mdxContent} components={shortcodes} />
         </div>
 
+        {/* Experience Content */}
         <div className="row mt-24 text-left lg:flex-nowrap">
-
           <div className="experience mt-10 lg:mt-0 lg:col-6">
             <div className="rounded border border-border p-6 dark:border-darkmode-border ">
               {markdownify(experience.title, "h2", "section-title mb-12")}
@@ -51,37 +52,11 @@ const About = ({ data }) => {
               </ul>
             </div>
           </div>
-          <div className="training mt-10 lg:mt-0 lg:col-6">
-            <div className="rounded border border-border p-6 dark:border-darkmode-border ">
-              {markdownify(training.title, "h2", "section-title mb-12")}
-              <ul className="row">
-                {training?.list?.map((item, index) => (
-                  <li
-                    className="mb-5 text-lg font-bold text-dark dark:text-darkmode-light lg:col-6"
-                    key={"training-" + index}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="certification mt-10 lg:mt-0 lg:col-6">
-            <div className="rounded border border-border p-6 dark:border-darkmode-border ">
-              {markdownify(certification.title, "h2", "section-title mb-12")}
-              <ul className="row">
-                {certification?.list?.map((item, index) => (
-                  <li
-                    className="mb-5 text-lg font-bold text-dark dark:text-darkmode-light lg:col-6"
-                    key={"certification-" + index}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="technicalskill mt-10 lg:mt-0 lg:col-6">
+        </div>
+
+        {/* Training, Certifications, Technical Skills Content */}
+        <div className="row mt-10 text-left lg:flex">
+          <div className="technicalskill mt-10 lg:col-6">
             <div className="rounded border border-border p-6 dark:border-darkmode-border ">
               {markdownify(technicalskill.title, "h2", "section-title mb-12")}
               <ul className="row">
@@ -96,7 +71,42 @@ const About = ({ data }) => {
               </ul>
             </div>
           </div>
-          <div className="mt-10 lg:mt-0 lg:col-6 ">
+          <div className="training mt-10 lg:col-6">
+            <div className="rounded border border-border p-6 dark:border-darkmode-border ">
+              {markdownify(training.title, "h2", "section-title mb-12")}
+              <ul className="row">
+                {training?.list?.map((item, index) => (
+                  <li
+                    className="mb-5 text-lg font-bold text-dark dark:text-darkmode-light lg:col-6"
+                    key={"training-" + index}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="certification mt-10 lg:col-6">
+            <div className="rounded border border-border p-6 dark:border-darkmode-border ">
+              {markdownify(certification.title, "h2", "section-title mb-12")}
+              <ul className="row">
+                {certification?.list?.map((item, index) => (
+                  <li
+                    className="mb-5 text-lg font-bold text-dark dark:text-darkmode-light lg:col-6"
+                    key={"certification-" + index}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Formal Education Content */}
+        <div className="row mt-10 text-left lg:flex-nowrap">
+          <div className="mt-10 lg:col-6 ">
             <div className="rounded border border-border p-6 dark:border-darkmode-border ">
               {markdownify(education.title, "h2", "section-title mb-12")}
               <div className="row">
@@ -113,6 +123,7 @@ const About = ({ data }) => {
           </div>
         </div>
       </div>
+      {/* End of Main Content */}
     </section>
   );
 };
